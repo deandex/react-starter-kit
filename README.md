@@ -1,14 +1,28 @@
-## React Starter Kit — web app boilerplate
+React Starter Kit — web app boilerplate
+=======================================
 
-React Starter Kit is an web app boilerplate for all our client projects.
+Quick start project template for projects and learning React.
 
+### Objective
+
+React Starter Kit is an web app boilerplate for all our client projects.<br />
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Usage
+**Clone this repository**
+```
+git clone git@github.com:deandex/react-starter-kit.git
+```
 
-In the project directory, you can run:
+**Install**
+```
+npm install
+```
 
-### `yarn start`
+**Start the application in development mode**
+```
+npm start
+```
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -16,12 +30,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+Static files are served from the `public` folder, project JavaScript files are bundled from the `src` folder.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**When ready, build for staging**
+```
+npm run build:staging
+```
 
-### `yarn build`
+This will generate a minimized bundle.js file on the `public` folder, and use staging environment
+
+**When ready, build for production**
+```
+npm run build
+```
+
+This will generate a minimized bundle.js file on the `public` folder, and use production environment
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -30,6 +53,12 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Dependencies
+
+```
+npm install -g env-cmd
+```
 
 ### License
 

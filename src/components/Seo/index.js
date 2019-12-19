@@ -1,15 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+
+import {
+  WEBSITE_TITLE,
+  WEBSITE_NAME,
+  WEBSITE_DESCRIPTION,
+  WEBSITE_KEYWORDS,
+  OPEN_GRAPH,
+} from '../../global/environment';
 
 function SEO({ description, lang, meta, keywords, title, image }) {
   const site = {
     siteMetadata: {
-      title: process.env.REACT_APP_WEBSITE_TITLE,
-      description: process.env.REACT_APP_WEBSITE_DESCRIPTION,
+      title: WEBSITE_TITLE,
+      name: WEBSITE_NAME,
+      description: WEBSITE_DESCRIPTION,
       author: `@deansofttechnology`,
-      keywords: ["career capital firm", "open access knowledge", "oaks", "oaks co"],
-      image: process.env.REACT_APP_OPEN_GRAPH,
+      keywords: WEBSITE_KEYWORDS.split(','),
+      image: OPEN_GRAPH,
     },
   };
 
@@ -19,11 +28,9 @@ function SEO({ description, lang, meta, keywords, title, image }) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s - ${site.siteMetadata.name} | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -31,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         },
         {
           property: `og:title`,
-          content: `${site.siteMetadata.title} - ${title}`,
+          content: `${title} - ${site.siteMetadata.name} | ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -76,7 +83,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                 name: `keywords`,
                 content: metaKeywords.join(`, `),
               }
-            : []
+            : [],
         )
         .concat(meta)}
       link={[

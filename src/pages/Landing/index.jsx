@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import SEO from "../Seo";
+import SEO from '../../components/Seo';
 
-import ImgLogo from "../../logo.svg";
+import ImgLogo from '../../logo.svg';
 
 const Landing = () => (
   <>
     <SEO title="Deansoft - Your Title" />
     <div
       style={{
-        display: "flex",
+        display: 'flex',
         height: 350,
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         paddingTop: 50,
         paddingBottom: 50,
       }}

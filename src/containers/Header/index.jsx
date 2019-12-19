@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import * as ROUTES from "../../constants/routes";
+import * as ROUTES from '../../global/routes';
 
 function Navigation() {
   return (
-    <div style={{ textAlign: "right", paddingRight: 20 }}>
+    <div style={{ textAlign: 'right', paddingRight: 20 }}>
       <Link to={ROUTES.LANDING} style={{ marginRight: 20 }}>
         Home
       </Link>

@@ -2,7 +2,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
+    "es6": true
   },
   "parser": "babel-eslint",
   "extends": [
@@ -28,6 +28,7 @@
       "prettier/prettier": ["error"],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "jsx-a11y/label-has-for": 0,
-      "jsx-a11y/label-has-associated-control": 0
+      "jsx-a11y/label-has-associated-control": 0,
+      "jsx-a11y/control-has-associated-label": 0
   }
 }

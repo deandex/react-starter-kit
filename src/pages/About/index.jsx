@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import SEO from "../Seo";
+import SEO from '../../components/Seo';
 
 const About = () => (
   <>
